@@ -1,0 +1,719 @@
+{
+  "flows": {
+    "standard": [
+      "start",
+      "topics",
+      "questions",
+      "sources",
+      "notes",
+      "scenarios",
+      "visuals",
+      "brief",
+      "validate"
+    ],
+    "history": [
+      "start",
+      "history",
+      "notes",
+      "visuals",
+      "brief",
+      "validate"
+    ]
+  },
+  "steps": {
+    "start": {
+      "short": "شروع و محدوده",
+      "eyebrow": "Research Pack",
+      "title": "محدوده و تعریف تحقیق",
+      "intro": "برای چه کسی، در چه زمینه‌ای و برای کمک به چه تصمیمی تحقیق می‌کنی؟",
+      "blocks": [
+        {
+          "type": "slot",
+          "name": "start-extra"
+        },
+        {
+          "type": "fields",
+          "columns": 2,
+          "fields": [
+            {
+              "id": "project.title",
+              "kind": "input",
+              "label": "عنوان تحقیق",
+              "default": "{lesson.english}"
+            },
+            {
+              "id": "project.id",
+              "kind": "input",
+              "label": "شناسه",
+              "default": "{lesson.code}"
+            },
+            {
+              "id": "project.audience",
+              "kind": "select",
+              "label": "مخاطب",
+              "options": [
+                {
+                  "value": "general",
+                  "label": "عموم مردم؛ مبتدی تا متوسط"
+                },
+                {
+                  "value": "youth",
+                  "label": "جوانان و شروع‌کنندگان زندگی مالی"
+                },
+                {
+                  "value": "working-families",
+                  "label": "شاغلان و خانواده‌ها"
+                },
+                {
+                  "value": "mixed",
+                  "label": "ترکیبی از گروه‌های عمومی"
+                }
+              ]
+            },
+            {
+              "id": "project.geo",
+              "kind": "select",
+              "label": "زمینه جغرافیایی",
+              "options": [
+                {
+                  "value": "iran-global-evidence",
+                  "label": "ایران؛ با استفاده از نظریه‌ها و شواهد جهانی"
+                },
+                {
+                  "value": "iran-vs-countries",
+                  "label": "مقایسه ایران با چند کشور"
+                },
+                {
+                  "value": "global",
+                  "label": "مبانی جهانی بدون تمرکز کشوری"
+                }
+              ]
+            },
+            {
+              "id": "project.language",
+              "kind": "select",
+              "label": "زبان یادداشت‌ها",
+              "options": [
+                {
+                  "value": "fa-en-terms",
+                  "label": "فارسی + اصطلاحات انگلیسی"
+                },
+                {
+                  "value": "en",
+                  "label": "انگلیسی"
+                },
+                {
+                  "value": "fa",
+                  "label": "فارسی"
+                }
+              ]
+            },
+            {
+              "id": "project.date",
+              "kind": "date",
+              "label": "تاریخ شروع",
+              "default": "{today}"
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "project.problem",
+              "kind": "textarea",
+              "label": "تعریف مسئله به زبان خودت",
+              "placeholder": "مثلاً چرا افراد با وجود دانستن اهمیت پس‌انداز، در عمل برای آینده پول کنار نمی‌گذارند؟"
+            },
+            {
+              "id": "project.decision",
+              "kind": "textarea",
+              "label": "این تحقیق قرار است به چه تصمیمی کمک کند؟",
+              "placeholder": "مثلاً تعیین اینکه Finance City چه رفتارهایی را آموزش دهد، چه موانعی را توضیح دهد و چه تمرین‌هایی بسازد."
+            }
+          ]
+        }
+      ]
+    },
+    "topics": {
+      "short": "انتخاب موضوعات",
+      "eyebrow": "Topic Map",
+      "title": "موضوعات تحقیق را انتخاب کن",
+      "intro": "موضوعات زیر از قبل آماده شده‌اند. برای نسخه اول، ۳ تا ۴ خوشه را انتخاب کن؛ لازم نیست همه را یک‌باره پوشش بدهی.",
+      "blocks": [
+        {
+          "type": "picker",
+          "id": "topics",
+          "source": "pack:topics",
+          "layout": "cards",
+          "presets": [
+            {
+              "label": "انتخاب هسته پیشنهادی",
+              "pack": "coreTopics"
+            },
+            {
+              "label": "پاک‌کردن انتخاب‌ها",
+              "clear": true
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "topics.custom",
+              "kind": "textarea",
+              "label": "موضوعات یا سؤال‌های اختصاصی خودت",
+              "placeholder": "هر موضوعی که در فهرست نیست، اینجا اضافه کن..."
+            }
+          ]
+        },
+        {
+          "type": "slot",
+          "name": "topics-note"
+        }
+      ]
+    },
+    "questions": {
+      "short": "سؤالات تحقیق",
+      "eyebrow": "Questions",
+      "title": "سؤالات تحقیق",
+      "intro": "سؤال‌های پایه را محدود کن و برای هر سؤال فقط تا جایی پیش برو که بتوانی یک پاسخ قابل دفاع بنویسی.",
+      "blocks": [
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "questions.main",
+              "kind": "textarea",
+              "label": "سؤال مرکزی",
+              "hint": "نسخه نهایی سؤال مرکزی خودت"
+            }
+          ]
+        },
+        {
+          "type": "checklist",
+          "id": "questions",
+          "source": "pack:questionGroups",
+          "grouped": true
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "questions.custom",
+              "kind": "textarea",
+              "label": "سؤالات باز جدید",
+              "placeholder": "سؤال‌های تکمیلی را اینجا اضافه کن..."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "text": "قاعده: سؤال «چرا مردم بد خرج می‌کنند؟» جهت‌دار است. بهتر: «چه موقعیت‌ها، محدودیت‌ها و الگوهای تصمیم‌گیری با خرج‌کردن برنامه‌ریزی‌نشده همراه‌اند؟»"
+        }
+      ]
+    },
+    "sources": {
+      "short": "منابع و شواهد",
+      "eyebrow": "Evidence",
+      "title": "منابع اولیه پیشنهادی",
+      "intro": "از ابزارهای سنجش و داده‌های اصلی شروع کن. مقاله‌های مروری و پست‌های وبلاگی را برای جهت‌یابی بخوان، نه به‌عنوان تنها پشتوانه ادعا.",
+      "blocks": [
+        {
+          "type": "sources",
+          "source": "pack:sources"
+        },
+        {
+          "type": "keywords",
+          "source": "pack:keywords",
+          "title": "کلیدواژه‌های جست‌وجو",
+          "text": "عبارت‌ها را عیناً در Google Scholar، وب‌سایت ناشر یا موتور جست‌وجو وارد کن؛ برای ایران نام نهاد و سال را هم اضافه کن."
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "sources.extra",
+              "kind": "textarea",
+              "rows": 6,
+              "label": "منابعی که خودت پیدا کرده‌ای (عنوان، لینک، سال، نوع منبع)",
+              "placeholder": "عنوان | نویسنده/نهاد | سال | لینک | چرا مرتبط است"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "محدودیت مهم ایران",
+          "text": "اگر برای یک رفتار، داده نماینده ملی و تازه پیدا نکردی، آن را به‌عنوان «خلأ داده» ثبت کن. از داده‌های یک نمونه کوچک یا تجربه شخصی، نتیجه ملی نساز."
+        }
+      ]
+    },
+    "notes": {
+      "short": "یادداشت‌ها و یافته‌ها",
+      "eyebrow": "Notes",
+      "title": "یادداشت‌برداری و استخراج یافته",
+      "intro": "هر یادداشت باید یک ادعا یا نکته داشته باشد. خلاصه‌کردن کل مقاله در چند پاراگراف، روش مطلوب این پروژه نیست.",
+      "blocks": [
+        {
+          "type": "log",
+          "id": "notes",
+          "addLabel": "افزودن یادداشت",
+          "empty": "هنوز یادداشتی ثبت نشده است.",
+          "required": "عنوان و محتوای یادداشت را وارد کن.",
+          "fields": [
+            {
+              "id": "type",
+              "kind": "select",
+              "role": "badge",
+              "label": "نوع یادداشت",
+              "options": [
+                {
+                  "value": "fact",
+                  "label": "Fact · داده یا یافته گزارش‌شده"
+                },
+                {
+                  "value": "concept",
+                  "label": "Concept · تعریف یا سازوکار"
+                },
+                {
+                  "value": "insight",
+                  "label": "Insight · برداشت تحلیلی خودم"
+                },
+                {
+                  "value": "example",
+                  "label": "Example · مثال واقعی یا فرضی"
+                },
+                {
+                  "value": "question",
+                  "label": "Question · ابهام باز"
+                },
+                {
+                  "value": "limitation",
+                  "label": "Limitation · محدودیت و نقد"
+                },
+                {
+                  "value": "ai-draft",
+                  "label": "AI Draft · پیش‌نویس هوش مصنوعی"
+                }
+              ]
+            },
+            {
+              "id": "source",
+              "kind": "input",
+              "label": "منبع / شناسه",
+              "placeholder": "مثلاً OECD 2023، صفحه ۲۴",
+              "role": "meta"
+            },
+            {
+              "id": "title",
+              "kind": "input",
+              "label": "عنوان کوتاه یادداشت",
+              "placeholder": "مثلاً برنامه‌ریزی مالی با رفتار واقعی یکسان نیست",
+              "role": "title",
+              "required": true
+            },
+            {
+              "id": "body",
+              "kind": "textarea",
+              "label": "محتوا / توضیح",
+              "placeholder": "با زبان خودت، یک نکته مشخص را بنویس...",
+              "role": "body",
+              "required": true
+            },
+            {
+              "id": "relevance",
+              "kind": "textarea",
+              "label": "ارتباط با ایران یا Finance City",
+              "placeholder": "این نکته چه چیزی را برای مخاطب ایرانی روشن می‌کند؟",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "title": "قالب پنج‌خطی مطالعه یک منبع",
+          "ordered": true,
+          "list": [
+            "این منبع دقیقاً چه سؤالی را بررسی کرده؟",
+            "روش و نمونه چه بوده؟",
+            "مهم‌ترین یافته مرتبط چیست؟",
+            "چه چیزی را ثابت نمی‌کند؟",
+            "برای مخاطب ایرانی چه کاربرد یا محدودیتی دارد؟"
+          ]
+        }
+      ]
+    },
+    "scenarios": {
+      "short": "سناریو و مثال ایران",
+      "eyebrow": "Iran Context",
+      "title": "سناریوها و مثال‌های زندگی مالی در ایران",
+      "intro": "سناریوها برای ملموس‌کردن سازوکارها هستند؛ تا زمانی که داده یا مصاحبه نداریم، آن‌ها را نمونه آماری یا واقعیت عمومی معرفی نکن.",
+      "blocks": [
+        {
+          "type": "log",
+          "id": "scenarios",
+          "addLabel": "افزودن سناریو",
+          "empty": "هنوز سناریویی ثبت نشده است.",
+          "required": "عنوان سناریو را وارد کن.",
+          "ideas": {
+            "source": "pack:scenarioIdeas",
+            "title": "سناریوهای شروع پیشنهادی",
+            "useLabel": "استفاده",
+            "target": "title"
+          },
+          "fields": [
+            {
+              "id": "title",
+              "kind": "input",
+              "label": "عنوان سناریو",
+              "placeholder": "مثلاً خرید قسطی در برابر پس‌انداز اضطراری",
+              "role": "title",
+              "required": true
+            },
+            {
+              "id": "person",
+              "kind": "textarea",
+              "label": "شخصیت و شرایط",
+              "placeholder": "سن، وضعیت شغلی، نوع درآمد، تعهدات و شرایط زندگی؛ بدون کلیشه‌سازی",
+              "rows": 3
+            },
+            {
+              "id": "choice",
+              "kind": "textarea",
+              "label": "موقعیت / انتخاب مالی",
+              "placeholder": "چه انتخابی پیش روی فرد است؟ چه محدودیت‌هایی دارد؟",
+              "rows": 3
+            },
+            {
+              "id": "mechanism",
+              "kind": "textarea",
+              "label": "سازوکار رفتاری احتمالی",
+              "placeholder": "مثلاً present bias، mental accounting، social pressure؛ به‌عنوان فرضیه نه تشخیص قطعی",
+              "rows": 3
+            },
+            {
+              "id": "evidence",
+              "kind": "textarea",
+              "label": "چه شواهدی این سناریو را پشتیبانی یا رد می‌کند؟",
+              "placeholder": "داده، مصاحبه، منبع یا سؤال قابل آزمون",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "text": "برای بومی‌سازی، عوامل ساختاری را هم ببین: تورم، نااطمینانی درآمد، دسترسی به اعتبار، هزینه مسکن، حمایت خانوادگی و تفاوت‌های شهری/روستایی. رفتار را فقط به «ضعف اراده» تقلیل نده."
+        }
+      ]
+    },
+    "visuals": {
+      "short": "تصویر و مواد خام",
+      "eyebrow": "Visual Material",
+      "title": "تصاویر، نمودارها و مواد خام",
+      "intro": "تصویر منبع، نمودار داده، عکس محیط یا طرح دستی را به تحقیق وصل کن. حتماً منبع، مجوز و معنای تصویر را ثبت کن.",
+      "blocks": [
+        {
+          "type": "images",
+          "id": "images",
+          "label": "افزودن تصویر",
+          "hint": "تصاویر روی همین دستگاه ذخیره می‌شوند و کوچک‌سازی خودکار دارند. در خروجی Markdown فقط نام فایل‌ها ثبت می‌شود.",
+          "remove": "حذف"
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "visual.caption",
+              "kind": "textarea",
+              "label": "یادداشت تصویری / کپشن / منبع",
+              "placeholder": "این تصویر چه چیزی را نشان می‌دهد؟ منبع و مجوز استفاده چیست؟"
+            },
+            {
+              "id": "visual.chart",
+              "kind": "textarea",
+              "label": "نمودار یا داده مورد نیاز",
+              "placeholder": "مثلاً نمودار ارتباط درآمد نامنظم و دشواری برنامه‌ریزی؛ متغیرها، منبع و سال داده را مشخص کن."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "text": "از نمودارهای بدون واحد، سال، جامعه آماری و منبع استفاده نکن. اگر نمودار صرفاً شماتیک است، روی آن بنویس «نمایش مفهومی؛ نه داده واقعی»."
+        }
+      ]
+    },
+    "brief": {
+      "short": "مقاله و ویدیوی بلند",
+      "eyebrow": "Content Brief",
+      "title": "تبدیل تحقیق به مقاله و ویدیوی بلند",
+      "intro": "اینجا هنوز تدوین یا سناریونویسی نهایی نمی‌کنیم؛ فقط نقشه محتوایی مبتنی بر یافته‌ها را آماده می‌کنیم تا بعداً تولید سریع‌تر شود.",
+      "blocks": [
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "content.core",
+              "kind": "textarea",
+              "label": "پیام مرکزی مقاله / ویدیو",
+              "placeholder": "مخاطب بعد از این محتوا باید چه چیزی را بهتر بفهمد؟"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "title": "طرح مقاله",
+              "blocks": [
+                {
+                  "type": "fields",
+                  "fields": [
+                    {
+                      "id": "content.articleTitle",
+                      "kind": "input",
+                      "label": "عنوان کاری"
+                    },
+                    {
+                      "id": "content.articleHook",
+                      "kind": "textarea",
+                      "label": "پرسش آغازین",
+                      "rows": 3
+                    },
+                    {
+                      "id": "content.articleOutline",
+                      "kind": "textarea",
+                      "label": "بخش‌ها و ترتیب استدلال",
+                      "placeholder": "۱. مسئله روزمره\n۲. مفهوم رفتاری\n۳. شواهد\n۴. زمینه ایران\n۵. راهکار یا تمرین\n۶. محدودیت‌ها",
+                      "rows": 7
+                    },
+                    {
+                      "id": "content.articleAction",
+                      "kind": "textarea",
+                      "label": "تمرین یا اقدام خواننده",
+                      "rows": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "طرح ویدیوی بلند",
+              "blocks": [
+                {
+                  "type": "fields",
+                  "fields": [
+                    {
+                      "id": "content.videoTitle",
+                      "kind": "input",
+                      "label": "عنوان کاری"
+                    },
+                    {
+                      "id": "content.videoQuestion",
+                      "kind": "textarea",
+                      "label": "سؤال / تضاد اصلی",
+                      "rows": 3
+                    },
+                    {
+                      "id": "content.videoOutline",
+                      "kind": "textarea",
+                      "label": "بخش‌های روایی و آموزشی",
+                      "placeholder": "۱. موقعیت آشنا\n۲. سؤال و تضاد\n۳. آزمایش یا مثال\n۴. توضیح سازوکار\n۵. شواهد و محدودیت\n۶. کاربرد در زندگی مخاطب",
+                      "rows": 7
+                    },
+                    {
+                      "id": "content.videoVisuals",
+                      "kind": "textarea",
+                      "label": "صحنه‌ها، نمودارها و تصاویر مورد نیاز",
+                      "rows": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "content.cautions",
+              "kind": "textarea",
+              "label": "ادعاهایی که نباید بدون شواهد بیان شوند",
+              "placeholder": "مثلاً درصد مشخصی از ایرانیان؛ رابطه علت و معلولی؛ ادعای تشخیص روان‌شناختی"
+            }
+          ]
+        }
+      ]
+    },
+    "validate": {
+      "short": "اعتبارسنجی و جمع‌بندی",
+      "eyebrow": "Quality Gate",
+      "title": "اعتبارسنجی و پایان تحقیق",
+      "intro": "با این چک‌لیست تصمیم بگیر آیا تحقیق برای تبدیل‌شدن به محتوای عمومی آماده است یا نه.",
+      "blocks": [
+        {
+          "type": "checklist",
+          "id": "validations",
+          "source": "shared:validations"
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "final.findings",
+              "kind": "textarea",
+              "label": "مهم‌ترین یافته‌های نهایی (حداکثر ۵ مورد)",
+              "placeholder": "هر یافته یک جمله؛ کنار هر کدام شناسه منبع را بنویس."
+            },
+            {
+              "id": "final.unknowns",
+              "kind": "textarea",
+              "label": "چه چیزهایی هنوز نامعلوم است؟"
+            },
+            {
+              "id": "final.productImplications",
+              "kind": "textarea",
+              "label": "نتیجه برای طراحی Finance City",
+              "placeholder": "چه رفتار یا مهارتی باید آموزش داده شود؟ چه تمرینی مناسب است؟"
+            },
+            {
+              "id": "final.status",
+              "kind": "select",
+              "label": "تصمیم نهایی",
+              "options": [
+                {
+                  "value": "researching",
+                  "label": "در حال تحقیق"
+                },
+                {
+                  "value": "ready",
+                  "label": "آماده تبدیل به مقاله و ویدیو"
+                },
+                {
+                  "value": "needs-data",
+                  "label": "نیازمند داده یا مصاحبه بیشتر"
+                },
+                {
+                  "value": "stopped",
+                  "label": "متوقف؛ ارزش ادامه ندارد"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "title": "معیار توقف سریع",
+          "text": "وقتی سؤال اصلی پاسخ روشن دارد، حداقل ۳ منبع معتبر و مستقل بررسی شده، مرز شواهد جهانی و ایران روشن است، مثال کاربردی و محدودیت‌ها ثبت شده و یک تمرین عملی قابل تعریف است، تحقیق را متوقف کن. برای ادعای حساس یا عدد ملی، آستانه شواهد بالاتر لازم است."
+        },
+        {
+          "type": "actions",
+          "actions": [
+            "download-md",
+            "share-md",
+            "print"
+          ]
+        }
+      ]
+    },
+    "history": {
+      "short": "موضوعات تاریخی",
+      "eyebrow": "Research Track · {lesson.code}",
+      "title": "تاریخ اقتصاد | Economic History",
+      "intro": "یک مسیر تحقیق مستقل و موازی با مسیر رفتار مالی؛ برای فهم اینکه اقتصادها، نهادها، پول، بازارها و زندگی خانوارها چگونه در طول زمان تغییر کرده‌اند.",
+      "blocks": [
+        {
+          "type": "callout",
+          "title": "قاعده",
+          "text": "تاریخ اقتصادی را به روایت اتفاقات محدود نکن. هر موضوع را با این چهار سؤال بررسی کن: چه اتفاقی افتاد؟ چرا؟ چه کسانی/بخش‌هایی اثر گرفتند؟ چه شواهد و تفسیرهای رقیبی وجود دارد؟"
+        },
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "title": "ایران | موضوعات تحقیق",
+              "blocks": [
+                {
+                  "type": "picker",
+                  "id": "history.iran",
+                  "source": "pack:iranTopics",
+                  "layout": "compact"
+                }
+              ]
+            },
+            {
+              "title": "جهان | موضوعات تحقیق",
+              "blocks": [
+                {
+                  "type": "picker",
+                  "id": "history.world",
+                  "source": "pack:worldTopics",
+                  "layout": "compact"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "history.period",
+              "kind": "input",
+              "label": "دوره یا بازه زمانی مورد بررسی",
+              "placeholder": "مثلاً ۱۲۸۵ تا ۱۳۵۷ شمسی / ۱۹۷۰ تا ۲۰۰۸ میلادی"
+            },
+            {
+              "id": "history.question",
+              "kind": "textarea",
+              "label": "سؤال اصلی این موضوع تاریخی",
+              "placeholder": "مثلاً تورم‌های مزمن چگونه بر پس‌انداز خانوار و انتخاب دارایی اثر گذاشته‌اند؟"
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "columns": 2,
+          "fields": [
+            {
+              "id": "history.events",
+              "kind": "textarea",
+              "label": "رویدادها / نقاط عطف",
+              "placeholder": "سال، رویداد، منبع اولیه، اهمیت احتمالی"
+            },
+            {
+              "id": "history.indicators",
+              "kind": "textarea",
+              "label": "شاخص‌ها و سری‌های زمانی",
+              "placeholder": "تورم، دستمزد واقعی، نرخ ارز، رشد GDP، بیکاری، درآمد نفت، بدهی دولت..."
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "fields": [
+            {
+              "id": "history.sources",
+              "kind": "textarea",
+              "label": "منابع آرشیوی و اولیه",
+              "placeholder": "گزارش بانک مرکزی، سالنامه آماری، قوانین بودجه، گزارش‌های بانک جهانی، آرشیو روزنامه‌ها، اسناد تاریخی..."
+            },
+            {
+              "id": "history.interpretations",
+              "kind": "textarea",
+              "label": "تفسیرهای متفاوت / اختلاف نظر مورخان و اقتصاددانان",
+              "placeholder": "روایت A و شواهد آن؛ روایت B و شواهد آن؛ آنچه هنوز قطعی نیست..."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "source": "pack:sources",
+          "title": "منابع شروع پیشنهادی",
+          "hint": "Iran in Data و Iran Data Portal برای کشف مسیر داده و سری‌ها مفیدند؛ برای استناد نهایی، منبع اصلی و تعریف شاخص را پیدا و ثبت کن. برخی داده‌های تاریخی با روش‌های متفاوت بازسازی شده‌اند."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,560 @@
+{
+ "shared": {
+  "validations": [
+   {
+    "id": "v1",
+    "text": "رفتار، نگرش و دانش مالی را از هم تفکیک کرده‌ام."
+   },
+   {
+    "id": "v2",
+    "text": "برای هر ادعای مهم، منبع و سال مشخص دارم."
+   },
+   {
+    "id": "v3",
+    "text": "روش، جامعه آماری و محدودیت نمونه را بررسی کرده‌ام."
+   },
+   {
+    "id": "v4",
+    "text": "شواهد جهانی را به ایران تعمیم نداده‌ام."
+   },
+   {
+    "id": "v5",
+    "text": "داده رسمی ایران را از تحلیل شخصی جدا کرده‌ام."
+   },
+   {
+    "id": "v6",
+    "text": "همبستگی را به‌عنوان رابطه علت و معلولی معرفی نکرده‌ام."
+   },
+   {
+    "id": "v7",
+    "text": "سناریوها را به‌عنوان مثال یا فرضیه برچسب زده‌ام."
+   },
+   {
+    "id": "v8",
+    "text": "برای مفاهیم روان‌شناختی از تشخیص‌دادن افراد پرهیز کرده‌ام."
+   },
+   {
+    "id": "v9",
+    "text": "یک تمرین عملی و کم‌ریسک برای مخاطب تعریف کرده‌ام."
+   },
+   {
+    "id": "v10",
+    "text": "منابع تصاویر و مجوز استفاده را ثبت کرده‌ام."
+   }
+  ]
+ },
+ "packs": {
+  "behavior": {
+   "topics": [
+    {
+     "id": "financial-habits",
+     "title": "Financial Habits",
+     "subtitle": "عادت‌های مالی روزمره",
+     "text": "ثبت هزینه، برنامه‌ریزی، پس‌انداز فعال، پرداخت به‌موقع و پیگیری پول.",
+     "hint": "financial habits; money management behavior; budgeting behavior"
+    },
+    {
+     "id": "financial-attitudes",
+     "title": "Financial Attitudes",
+     "subtitle": "نگرش‌ها و باورهای مالی",
+     "text": "باور درباره خرج‌کردن، پس‌انداز، آینده، امنیت و کنترل مالی.",
+     "hint": "financial attitudes; money beliefs; future orientation"
+    },
+    {
+     "id": "present-bias",
+     "title": "Present Bias",
+     "subtitle": "سوگیری زمان حال",
+     "text": "ترجیح پاداش فوری در برابر منفعت آینده؛ نقش فشار و محدودیت منابع.",
+     "hint": "present bias; time preference; intertemporal choice"
+    },
+    {
+     "id": "mental-accounting",
+     "title": "Mental Accounting",
+     "subtitle": "حسابداری ذهنی",
+     "text": "تقسیم ذهنی پول به پاکت‌ها و حساب‌های متفاوت و اثر آن بر انتخاب.",
+     "hint": "mental accounting; fungibility; budgeting heuristics"
+    },
+    {
+     "id": "loss-aversion",
+     "title": "Loss Aversion",
+     "subtitle": "زیان‌گریزی",
+     "text": "تفاوت واکنش افراد به زیان و سود؛ مراقب تعمیم افراطی مفهوم باش.",
+     "hint": "loss aversion; prospect theory; reference dependence"
+    },
+    {
+     "id": "emotional-spending",
+     "title": "Emotional Spending",
+     "subtitle": "خرج‌کردن هیجانی",
+     "text": "رابطه هیجان، استرس، خلق و خرید؛ تمایز همبستگی از علت.",
+     "hint": "emotional spending; mood and consumption; retail therapy"
+    },
+    {
+     "id": "social-comparison",
+     "title": "Social Comparison",
+     "subtitle": "مقایسه اجتماعی",
+     "text": "اثر شبکه اجتماعی، منزلت، خانواده و هنجارها بر مصرف.",
+     "hint": "social comparison; conspicuous consumption; peer effects"
+    },
+    {
+     "id": "financial-stress",
+     "title": "Financial Stress",
+     "subtitle": "استرس مالی",
+     "text": "نگرانی، فشار شناختی، نااطمینانی و پیامدهای تصمیم‌گیری.",
+     "hint": "financial stress; scarcity; cognitive bandwidth"
+    },
+    {
+     "id": "overconfidence-and-biases",
+     "title": "Overconfidence & Biases",
+     "subtitle": "اعتمادبه‌نفس بیش از حد و سوگیری‌ها",
+     "text": "اعتماد بیش از حد، تأییدطلبی، لنگراندازی و اثر تجربه اخیر.",
+     "hint": "overconfidence; confirmation bias; anchoring; recency bias"
+    },
+    {
+     "id": "financial-self-efficacy",
+     "title": "Financial Self-Efficacy",
+     "subtitle": "خودکارآمدی مالی",
+     "text": "باور فرد به توانایی مدیریت امور مالی و انجام اقدام مشخص.",
+     "hint": "financial self-efficacy; perceived financial control"
+    },
+    {
+     "id": "planning-vs-action",
+     "title": "Planning vs Action",
+     "subtitle": "شکاف قصد و عمل",
+     "text": "چرا دانستن و قصدکردن الزاماً به رفتار پایدار منجر نمی‌شود.",
+     "hint": "intention behavior gap; implementation intentions; habit formation"
+    },
+    {
+     "id": "household-decision-making",
+     "title": "Household Decision-Making",
+     "subtitle": "تصمیم‌گیری مالی خانوار",
+     "text": "قدرت تصمیم، مذاکره، مسئولیت و تفاوت دیدگاه در خانواده.",
+     "hint": "household financial decision making; intra-household bargaining"
+    }
+   ],
+   "coreTopics": [
+    "financial-habits",
+    "present-bias",
+    "mental-accounting",
+    "financial-stress"
+   ],
+   "questionGroups": [
+    {
+     "id": "qg1",
+     "title": "رفتارهای قابل مشاهده",
+     "items": [
+      {
+       "id": "q1-1",
+       "text": "افراد در زندگی روزمره چگونه درآمد و هزینه خود را پیگیری می‌کنند؟"
+      },
+      {
+       "id": "q1-2",
+       "text": "چه رفتارهایی با پس‌انداز فعال و آمادگی برای هزینه غیرمنتظره همراه‌اند؟"
+      },
+      {
+       "id": "q1-3",
+       "text": "افراد هنگام کمبود نقدینگی معمولاً چه گزینه‌هایی را انتخاب می‌کنند؟"
+      }
+     ]
+    },
+    {
+     "id": "qg2",
+     "title": "عوامل شناختی و رفتاری",
+     "items": [
+      {
+       "id": "q2-1",
+       "text": "حال‌گرایی چگونه می‌تواند برنامه‌ریزی بلندمدت را دشوار کند؟"
+      },
+      {
+       "id": "q2-2",
+       "text": "حسابداری ذهنی چگونه بر استفاده از پول اثر می‌گذارد؟"
+      },
+      {
+       "id": "q2-3",
+       "text": "زیان‌گریزی و سوگیری‌های شناختی در کدام تصمیم‌های مالی محتمل‌اند؟"
+      }
+     ]
+    },
+    {
+     "id": "qg3",
+     "title": "زمینه اجتماعی و اقتصادی ایران",
+     "items": [
+      {
+       "id": "q3-1",
+       "text": "تورم و نااطمینانی درآمد چه محدودیت‌هایی برای رفتار مالی ایجاد می‌کنند؟"
+      },
+      {
+       "id": "q3-2",
+       "text": "خانواده، شبکه اجتماعی و هنجارهای مصرف چگونه در تصمیم‌ها نقش دارند؟"
+      },
+      {
+       "id": "q3-3",
+       "text": "تفاوت درآمد ثابت و متغیر چه اثری بر برنامه‌ریزی مالی دارد؟"
+      }
+     ]
+    },
+    {
+     "id": "qg4",
+     "title": "کاربرد برای Finance City",
+     "items": [
+      {
+       "id": "q4-1",
+       "text": "کدام رفتارها قابل آموزش یا تمرین‌اند و کدام بیشتر محدودیت ساختاری‌اند؟"
+      },
+      {
+       "id": "q4-2",
+       "text": "چه تمرین کوتاهی می‌تواند به خودآگاهی مالی کمک کند بدون برچسب‌زدن به فرد؟"
+      },
+      {
+       "id": "q4-3",
+       "text": "چه شاخصی تغییر رفتار را در طول زمان نشان می‌دهد؟"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "src1",
+     "title": "OECD/INFE 2026 Toolkit",
+     "text": "چارچوب و پرسش‌نامه تازه برای سنجش دانش، نگرش، رفتار، شمول و رفاه مالی؛ مرجع اصلی طراحی سؤال.",
+     "kind": "ابزار سنجش / پرسش‌نامه",
+     "url": "https://www.oecd.org/en/publications/oecd-infe-toolkit-for-measuring-financial-literacy-inclusion-and-well-being-2026_92f2d439-en.html",
+     "usage": "برای طراحی سؤال‌ها؛ نسخه ۲۰۲۶ را جایگزین ابزارهای قدیمی‌تر در نظر بگیر."
+    },
+    {
+     "id": "src2",
+     "title": "OECD/INFE 2023 Survey",
+     "text": "نتایج پیمایش چندکشوری و تفکیک رفتار، نگرش، دانش، شمول و رفاه مالی.",
+     "kind": "گزارش پیمایشی",
+     "url": "https://www.oecd.org/en/publications/oecd-infe-2023-international-survey-of-adult-financial-literacy_56003a32-en.html",
+     "usage": "برای مقایسه مفهومی؛ مشارکت همه کشورها از جمله ایران را فرض نکن."
+    },
+    {
+     "id": "src3",
+     "title": "OECD/INFE 2022 Toolkit",
+     "text": "پرسش‌نامه و راهنمای روش‌شناسی؛ شامل رفتار بودجه‌بندی، پس‌انداز، وام‌گیری و انتخاب محصول.",
+     "kind": "ابزار سنجش",
+     "url": "https://www.oecd.org/en/publications/oecd-infe-toolkit-for-measuring-financial-literacy-and-financial-inclusion-2022_cbc4114f-en.html",
+     "usage": "مناسب برای استخراج پرسش‌های رفتاری و ساخت نسخه بومی."
+    },
+    {
+     "id": "src4",
+     "title": "CFPB Financial Well-Being Scale",
+     "text": "مقیاس معتبر رفاه مالی و مستندات توسعه، پایایی و شیوه نمره‌گذاری.",
+     "kind": "مقیاس سنجش / گزارش فنی",
+     "url": "https://www.consumerfinance.gov/data-research/research-reports/financial-well-being-scale/",
+     "usage": "مقیاس را بدون بررسی اعتبار ترجمه و تناسب فرهنگی، عیناً برای ایران اجرا نکن."
+    },
+    {
+     "id": "src5",
+     "title": "World Bank Global Findex 2025",
+     "text": "داده‌های بین‌المللی درباره پرداخت، پس‌انداز، وام‌گیری و مدیریت رویدادهای مالی.",
+     "kind": "پیمایش / داده",
+     "url": "https://www.worldbank.org/en/publication/globalfindex/report",
+     "usage": "ابتدا پوشش ایران و دسترسی به ریزداده را بررسی کن؛ نبود داده را صریح ثبت کن."
+    },
+    {
+     "id": "src6",
+     "title": "World Bank Global Findex Data",
+     "text": "دانلود شاخص‌ها، داده کشورها، پرسش‌نامه و مستندات روش‌شناسی.",
+     "kind": "پایگاه داده",
+     "url": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+     "usage": "برای اعداد، سال مرجع و تعریف شاخص را کنار هر عدد بنویس."
+    },
+    {
+     "id": "src7",
+     "title": "Statistical Center of Iran – HIES",
+     "text": "پیمایش هزینه و درآمد خانوار؛ مسیر اصلی بررسی الگوی هزینه، درآمد و تفاوت خانوارها در ایران.",
+     "kind": "داده رسمی ایران",
+     "url": "https://www.amar.org.ir/",
+     "usage": "از درگاه رسمی، گزارش سال مورد نظر و تعاریف متغیرها را پیدا و ثبت کن."
+    },
+    {
+     "id": "src8",
+     "title": "HBSIR documentation",
+     "text": "ابزار پژوهشی برای کار با داده‌های خرد پیمایش هزینه و درآمد خانوار ایران؛ پروژه‌ای ثانویه برای دسترسی/پردازش داده.",
+     "kind": "مستندات ابزار داده",
+     "url": "https://iran-open-data.github.io/HBSIR/",
+     "usage": "خود ابزار منبع اصلی داده نیست؛ اصالت و نسخه داده را با مرکز آمار تطبیق بده."
+    },
+    {
+     "id": "src9",
+     "title": "Thaler (1999) Mental Accounting Matters",
+     "text": "مقاله بنیادین درباره چگونگی دسته‌بندی ذهنی پول و اثر آن بر انتخاب.",
+     "kind": "مقاله پژوهشی بنیادین",
+     "url": "https://doi.org/10.1002/(SICI)1099-0771(199909)12:3<183::AID-BDM318>3.0.CO;2-F",
+     "usage": "برای سازوکار نظری؛ نتیجه را به همه افراد و همه موقعیت‌ها تعمیم نده."
+    },
+    {
+     "id": "src10",
+     "title": "Stango, Yoong & Zinman (2017) NBER",
+     "text": "بررسی تجربی چند عامل رفتاری و روش اندازه‌گیری آن‌ها در نمونه آمریکایی.",
+     "kind": "مقاله کاری پژوهشی",
+     "url": "https://www.nber.org/system/files/working_papers/w23625/w23625.pdf",
+     "usage": "برای نقد و روش؛ مقاله کاری را از مقاله داوری‌شده تفکیک کن."
+    }
+   ],
+   "keywords": [
+    "financial behavior",
+    "financial literacy behavior vs attitudes",
+    "household financial decision making",
+    "financial self-efficacy",
+    "present bias and saving",
+    "mental accounting household finance",
+    "financial stress and decision making",
+    "intention behavior gap saving",
+    "financial behavior Iran",
+    "Iran household expenditure income survey",
+    "Iran household saving behavior",
+    "financial inclusion Iran"
+   ],
+   "scenarioIdeas": [
+    {
+     "id": "sc1",
+     "text": "درآمد ثابت در برابر درآمد پروژه‌ای: برنامه‌ریزی و پس‌انداز چگونه فرق می‌کند؟"
+    },
+    {
+     "id": "sc2",
+     "text": "افزایش ناگهانی درآمد: تغییر سبک زندگی یا تقویت امنیت مالی؟"
+    },
+    {
+     "id": "sc3",
+     "text": "هزینه درمان یا تعمیر پیش‌بینی‌نشده: واکنش بدون صندوق اضطراری"
+    },
+    {
+     "id": "sc4",
+     "text": "خرید قسطی کالای مصرفی در برابر حفظ نقدینگی"
+    },
+    {
+     "id": "sc5",
+     "text": "فشار مقایسه اجتماعی برای خرید گوشی، خودرو یا سفر"
+    },
+    {
+     "id": "sc6",
+     "text": "پول نقد، کارت بانکی و کیف پول دیجیتال: آیا شکل پول خرج‌کردن را تغییر می‌دهد؟"
+    }
+   ],
+   "defaults": {
+    "picks": {
+     "topics": [
+      "financial-habits",
+      "present-bias",
+      "mental-accounting",
+      "financial-stress"
+     ]
+    },
+    "fields": {
+     "questions.main": "چه عواملی باعث می‌شوند افراد در زندگی روزمره تصمیم‌های مالی مشخصی بگیرند، و این تصمیم‌ها چگونه بر امنیت و رفاه مالی آن‌ها اثر می‌گذارد؟"
+    }
+   },
+   "slots": {
+    "start-extra": [
+     {
+      "type": "callout",
+      "title": "هدف این بسته",
+      "text": "ساخت یک تصویر دقیق و قابل‌استفاده از رفتار مالی افراد عادی؛ نه تشخیص شخصیت، نه قضاوت اخلاقی و نه نسخه‌پیچی یکسان برای همه."
+     },
+     {
+      "type": "stats",
+      "items": [
+       {
+        "value": "6",
+        "label": "خوشه اصلی تحقیق"
+       },
+       {
+        "value": "90–180",
+        "label": "دقیقه مطالعه اولیه پیشنهادی"
+       },
+       {
+        "value": "1",
+        "label": "خروجی اصلی: نقشه رفتار مالی"
+       }
+      ]
+     },
+     {
+      "type": "card",
+      "title": "تعریف عملیاتی موضوع",
+      "text": "در این پروژه، رفتار مالی را به‌صورت الگوهای مشاهده‌پذیر تصمیم‌گیری و عمل درباره کسب درآمد، خرج‌کردن، پس‌انداز، قرض‌گرفتن، برنامه‌ریزی و واکنش به فشار مالی بررسی می‌کنیم. نگرش و دانش مالی عوامل مرتبط‌اند، اما با خود رفتار یکی نیستند."
+     }
+    ],
+    "topics-note": [
+     {
+      "type": "callout",
+      "title": "پیشنهاد برای نسخه اول",
+      "text": "Financial Habits، Present Bias، Mental Accounting و Financial Stress. بعداً Social Comparison، Loss Aversion و Overconfidence را اضافه کن. مراقب باش اصطلاحات جذاب را به‌جای رفتار قابل مشاهده ننشانی."
+     }
+    ]
+   }
+  },
+  "history": {
+   "iranTopics": [
+    {
+     "id": "ir1",
+     "title": "اقتصاد ایران پیشامدرن: تجارت، مالیات، زمین و بازارها"
+    },
+    {
+     "id": "ir2",
+     "title": "قاجار: امتیازات، تجارت خارجی، پول و مالیه دولت"
+    },
+    {
+     "id": "ir3",
+     "title": "انقلاب مشروطه و شکل‌گیری نهادهای مالی"
+    },
+    {
+     "id": "ir4",
+     "title": "دوره رضاشاه: دولت‌سازی، بانکداری، راه‌آهن و صنعتی‌سازی"
+    },
+    {
+     "id": "ir5",
+     "title": "ملی‌شدن نفت و بحران ۱۳۳۰–۱۳۳۲"
+    },
+    {
+     "id": "ir6",
+     "title": "برنامه‌های عمرانی و اقتصاد نفتی ۱۳۳۰–۱۳۵۷"
+    },
+    {
+     "id": "ir7",
+     "title": "انقلاب ۱۳۵۷، جنگ و اقتصاد زمان جنگ"
+    },
+    {
+     "id": "ir8",
+     "title": "بازسازی پس از جنگ و تعدیل اقتصادی"
+    },
+    {
+     "id": "ir9",
+     "title": "خصوصی‌سازی، بانک‌ها و گسترش بازار سرمایه"
+    },
+    {
+     "id": "ir10",
+     "title": "تحریم‌ها، درآمد نفت و نرخ ارز"
+    },
+    {
+     "id": "ir11",
+     "title": "تورم مزمن، نقدینگی و سیاست پولی"
+    },
+    {
+     "id": "ir12",
+     "title": "مسکن، زمین و چرخه‌های دارایی"
+    },
+    {
+     "id": "ir13",
+     "title": "بازار کار، دستمزد واقعی و مهاجرت"
+    },
+    {
+     "id": "ir14",
+     "title": "یارانه‌ها، انرژی و بودجه عمومی"
+    },
+    {
+     "id": "ir15",
+     "title": "تجارت خارجی، واردات و تغییر الگوی مصرف"
+    },
+    {
+     "id": "ir16",
+     "title": "خانوار ایرانی: پس‌انداز، بدهی، طلا، ارز و مسکن"
+    }
+   ],
+   "worldTopics": [
+    {
+     "id": "wd1",
+     "title": "انقلاب صنعتی و تحول دستمزد و بهره‌وری"
+    },
+    {
+     "id": "wd2",
+     "title": "تاریخ پول، بانکداری و استاندارد طلا"
+    },
+    {
+     "id": "wd3",
+     "title": "رکود بزرگ ۱۹۲۹ و بیکاری/پس‌انداز خانوار"
+    },
+    {
+     "id": "wd4",
+     "title": "جنگ‌های جهانی و اقتصاد بسیج‌شده"
+    },
+    {
+     "id": "wd5",
+     "title": "نظام برتون وودز و فروپاشی آن"
+    },
+    {
+     "id": "wd6",
+     "title": "شوک‌های نفتی دهه ۱۹۷۰ و تورم رکودی"
+    },
+    {
+     "id": "wd7",
+     "title": "ظهور سیاست پولی مدرن و هدف‌گذاری تورم"
+    },
+    {
+     "id": "wd8",
+     "title": "جهانی‌شدن، تجارت و زنجیره تأمین"
+    },
+    {
+     "id": "wd9",
+     "title": "بحران بدهی آمریکای لاتین"
+    },
+    {
+     "id": "wd10",
+     "title": "بحران مالی آسیا ۱۹۹۷"
+    },
+    {
+     "id": "wd11",
+     "title": "بحران مالی جهانی ۲۰۰۸"
+    },
+    {
+     "id": "wd12",
+     "title": "بحران بدهی اروپا"
+    },
+    {
+     "id": "wd13",
+     "title": "اقتصاد چین و صنعتی‌شدن صادرات‌محور"
+    },
+    {
+     "id": "wd14",
+     "title": "رکود کووید و سیاست‌های حمایتی"
+    },
+    {
+     "id": "wd15",
+     "title": "تورم پس از همه‌گیری و شوک عرضه"
+    },
+    {
+     "id": "wd16",
+     "title": "تاریخ نابرابری، ثروت و تحرک اجتماعی"
+    }
+   ],
+   "sources": [
+    {
+     "id": "h1",
+     "title": "بانک مرکزی ایران",
+     "url": "https://www.cbi.ir/"
+    },
+    {
+     "id": "h2",
+     "title": "مرکز آمار ایران",
+     "url": "https://www.amar.org.ir/"
+    },
+    {
+     "id": "h3",
+     "title": "Iran Data Portal",
+     "url": "https://irandataportal.syr.edu/economic-financial-affairs/"
+    },
+    {
+     "id": "h4",
+     "title": "Iran in Data",
+     "url": "https://iranindata.org/"
+    },
+    {
+     "id": "h5",
+     "title": "Maddison Project",
+     "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/"
+    },
+    {
+     "id": "h6",
+     "title": "World Bank Archives",
+     "url": "https://www.worldbank.org/en/research/brief/world-bank-archives"
+    },
+    {
+     "id": "h7",
+     "title": "US Office of the Historian / FRUS",
+     "url": "https://history.state.gov/"
+    }
+   ]
+  }
+ }
+}
